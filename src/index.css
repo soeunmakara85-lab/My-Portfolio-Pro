@@ -1,0 +1,229 @@
+
+@import "tailwindcss";
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero Background Glow */
+.glow {
+  pointer-events: none;
+  animation: glowMove 8s ease-in-out infinite alternate;
+}
+
+.glow-two {
+  animation-delay: 2s;
+}
+
+@keyframes glowMove {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate(-35px, 30px) scale(1.2);
+  }
+}
+
+/* Main Content Animation */
+.hero-content {
+  animation: slideUp 1s ease-out both;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Badge */
+.hero-badge {
+  animation: slideUp 0.8s ease-out both;
+  animation-delay: 0.2s;
+}
+
+/* Heading */
+.hero-title {
+  animation: slideUp 0.9s ease-out both;
+  animation-delay: 0.3s;
+}
+
+/* Description */
+.hero-description {
+  animation: slideUp 1s ease-out both;
+  animation-delay: 0.5s;
+}
+
+/* Buttons */
+.hero-buttons {
+  animation: slideUp 1s ease-out both;
+  animation-delay: 0.7s;
+}
+
+/* Social Links */
+.hero-social {
+  animation: slideUp 1s ease-out both;
+  animation-delay: 0.9s;
+}
+
+/* Profile Animation */
+.hero-image {
+  opacity: 0;
+  animation: imageReveal 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes imageReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.75) translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Circle Animation */
+.hero-circle {
+  animation: circlePulse 5s ease-in-out infinite;
+}
+
+@keyframes circlePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+/* Inner Glow */
+.hero-glow {
+  animation: innerGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes innerGlow {
+  from {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 0.8;
+    transform: scale(1.15);
+  }
+}
+
+/* Floating Cards */
+.floating-card {
+  animation: floating 4s ease-in-out infinite;
+}
+
+.floating-two {
+  animation-delay: 1.5s;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Wave Hand */
+.wave-hand {
+  transform-origin: 70% 70%;
+  animation: waving 2.5s ease-in-out infinite;
+}
+
+@keyframes waving {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(15deg);
+  }
+
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  45% {
+    transform: rotate(15deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Primary Button */
+.button-primary {
+  transition: all 0.3s ease;
+}
+
+.button-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.3);
+}
+
+/* Secondary Button */
+.button-secondary {
+  transition: all 0.3s ease;
+}
+
+.button-secondary:hover {
+  transform: translateY(-5px);
+  border-color: #22d3ee;
+  color: #22d3ee;
+}
+
+/* Social Links */
+.social-link {
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  border-color: #22d3ee;
+  color: #22d3ee;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .hero-visual {
+    transform: scale(0.9);
+  }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero-image {
+    opacity: 1;
+  }
+}
